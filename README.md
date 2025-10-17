@@ -15,18 +15,64 @@ Une soundboard simple, rapide et prête à l’emploi pour les jeux de rôle ou 
 ## ⌨️ Touches actives (clavier AZERTY)
 
 | Touche | Son déclenché |
-|--------|----------------|
-| `&`    | Thunder         |
-| `é`    | Gun 1           |
-| `"`    | Gun 2           |
-| `'`    | Wind            |
-| `(`    | Rain            |
-| `-`    | Alarm           |
-| `è`    | Explosion       |
-| `_`    | Walking         |
-| `ç`    | Step2           |
-| `à`    | Pressure        |
-| `=`    | Stop            |
+| Page 1 | :--------- |
+| `²`    | Switch page|
+| `&`    | Thunder    |
+| `é`    | Gun 1      |
+| `"`    | Gun 2      |
+| `'`    | Wind       |
+| `(`    | Rain       |
+| `-`    | Explosion  |
+| `è`    | Explosion  |
+| `_`    | coin       |
+| `ç`    | Heart Beat |
+| `à`    | Pressure   |
+| `=`    | Stop       |
+
+| Touche | Nom du son |
+| Page 2 | :--------- |
+| `²`    | Switch page|
+| `&`    | Fracture   |
+| `é`    | Plouf      |
+| `"`    | Craft      |
+| `'`    | Lock       |
+| `(`    | Alien Door |
+| `-`    | Vault      |
+| `è`    | Old Door   |
+| `_`    | Door Slam  |
+| `ç`    | Crow       |
+| `à`    | KwaKwa     |
+| `=`    | Stop       |
+
+| Touche | Nom du son |
+| Page 3 | :--------- |
+| `²`    | Switch page|
+| `&`    | Steve      |
+| `é`    | Missing    |
+| `"`    | Drop       |
+| `'`    | Missing    |
+| `(`    | Missing    |
+| `-`    | Missing    |
+| `è`    | Missing    |
+| `_`    | Missing    |
+| `ç`    | Missing    |
+| `à`    | Missing    |
+| `=`    | Stop       |
+
+| Touche | Nom du son |
+| Page 4 | :--------- |
+| `²`    | Switch page|
+| `&`    | cave 1     |
+| `é`    | cave 2     |
+| `"`    | cave 3     |
+| `'`    | Walking    |
+| `(`    | Step2      |
+| `-`    | Groupe     |
+| `è`    | Alarm      |
+| `_`    | Alarm Bis  |
+| `ç`    | Creak      |
+| `à`    | wave       |
+| `=`    | Stop       |
 
 ---
 
@@ -93,4 +139,5 @@ pyinstaller --noconfirm --onefile --windowed --add-data "img;img" --add-data "se
     Projet open-source sous licence MIT. Aucune garantie.
 
 ### 👤 Auteur
-moi
+
+DBZ-V
