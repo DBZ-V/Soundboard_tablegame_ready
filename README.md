@@ -13,7 +13,7 @@ Une soundboard simple, rapide et prête à l’emploi pour les jeux de rôle ou 
 ---
 
 ## ⌨️ Touches actives (clavier AZERTY)
-
+```
 | Touche | Son déclenché |
 | Page 1 | :--------- |
 | `²`    | Switch page|
@@ -73,7 +73,7 @@ Une soundboard simple, rapide et prête à l’emploi pour les jeux de rôle ou 
 | `ç`    | Creak      |
 | `à`    | wave       |
 | `=`    | Stop       |
-
+```
 ---
 
 ## 🚀 Lancer l’application
@@ -141,3 +141,4 @@ pyinstaller --noconfirm --onefile --windowed --add-data "img;img" --add-data "se
 ### 👤 Auteur
 
 DBZ-V
+
