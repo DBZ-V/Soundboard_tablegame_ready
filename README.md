@@ -1,5 +1,8 @@
 # 🔊 Table Game Ready Soundboard
-🇬🇧 🇨🇦 🇺🇸
+🇬🇧 🇨🇦 🇺🇸 [French version below]
+📑 Jump to: [English](#-table-game-ready-soundboard) | [Français](#-table-game-ready-soundboard-1)
+
+
 A simple, fast, ready-to-use soundboard for role-playing or board games.  
 🎲 Controllable with the mouse or keyboard (top 12 keys on AZERTY keyboard).  
 🎛️ Graphical interface via Tkinter, audio playback with pygame.
@@ -13,65 +16,71 @@ A simple, fast, ready-to-use soundboard for role-playing or board games.
 ---
 
 ## ⌨️ Active Keys (AZERTY keyboard)
-```| Page 1 | :--------- |
-| `²`    | Switch page|
-| `&`    | Thunder    |
-| `é`    | Gun 1      |
-| `"`    | Gun 2      |
-| `'`    | Wind       |
-| `(`    | Rain       |
-| `-`    | Explosion  |
-| `è`    | Explosion  |
-| `_`    | coin       |
-| `ç`    | Heart Beat |
-| `à`    | Pressure   |
-| `=`    | Stop       |
+### Page 1
+| Key   | Triggered Sound |
+|-------|------------------|
+| `²`   | Switch page      |
+| `&`   | Thunder          |
+| `é`   | Gun 1            |
+| `"`   | Gun 2            |
+| `'`   | Wind             |
+| `(`   | Rain             |
+| `-`   | Explosion        |
+| `è`   | Explosion        |
+| `_`   | Coin             |
+| `ç`   | Heart Beat       |
+| `à`   | Pressure         |
+| `=`   | Stop             |
 
-| Touche | Nom du son |
-| Page 2 | :--------- |
-| `²`    | Switch page|
-| `&`    | Fracture   |
-| `é`    | Plouf      |
-| `"`    | Craft      |
-| `'`    | Lock       |
-| `(`    | Alien Door |
-| `-`    | Vault      |
-| `è`    | Old Door   |
-| `_`    | Door Slam  |
-| `ç`    | Crow       |
-| `à`    | KwaKwa     |
-| `=`    | Stop       |
 
-| Touche | Nom du son |
-| Page 3 | :--------- |
-| `²`    | Switch page|
-| `&`    | Steve      |
-| `é`    | Missing    |
-| `"`    | Drop       |
-| `'`    | Missing    |
-| `(`    | Missing    |
-| `-`    | Missing    |
-| `è`    | Missing    |
-| `_`    | Missing    |
-| `ç`    | Missing    |
-| `à`    | Missing    |
-| `=`    | Stop       |
+### Page 2
+| Key   | Triggered Sound |
+|-------|------------------|
+| `²`    | Switch page     |
+| `&`    | Fracture        |
+| `é`    | Plouf           |
+| `"`    | Craft           |
+| `'`    | Lock            |
+| `(`    | Alien Door      |
+| `-`    | Vault           |
+| `è`    | Old Door        |
+| `_`    | Door Slam       |
+| `ç`    | Crow            |
+| `à`    | KwaKwa          |
+| `=`    | Stop            |
 
-| Touche | Nom du son |
-| Page 4 | :--------- |
-| `²`    | Switch page|
-| `&`    | cave 1     |
-| `é`    | cave 2     |
-| `"`    | cave 3     |
-| `'`    | Walking    |
-| `(`    | Step2      |
-| `-`    | Groupe     |
-| `è`    | Alarm      |
-| `_`    | Alarm Bis  |
-| `ç`    | Creak      |
-| `à`    | wave       |
-| `=`    | Stop       |
-```
+### Page 3
+| Key   | Triggered Sound |
+|-------|------------------|
+| `²`    | Switch page     |
+| `&`    | Steve           |
+| `é`    | Missing         |
+| `"`    | Drop            |
+| `'`    | Missing         |
+| `(`    | Missing         |
+| `-`    | Missing         |
+| `è`    | Missing         |
+| `_`    | Missing         |
+| `ç`    | Missing         |
+| `à`    | Missing         |
+| `=`    | Stop            |
+
+### Page 4
+| Key   | Triggered Sound |
+|-------|------------------|
+| `²`    | Switch page     |
+| `&`    | cave 1          |
+| `é`    | cave 2          |
+| `"`    | cave 3          |
+| `'`    | Walking         |
+| `(`    | Step2           |
+| `-`    | Groupe          |
+| `è`    | Alarm           |
+| `_`    | Alarm Bis       |
+| `ç`    | Creak           |
+| `à`    | wave            |
+| `=`    | Stop            |
+
 ---
 
 ## 🚀 Launch the Application
@@ -144,7 +153,7 @@ pyinstaller --noconfirm --onefile --windowed --add-data "img;img" --add-data "se
 DBZ-V
 
 
-
+# 🔊 Table Game Ready Soundboard
 🇫🇷 🇨🇦 🇧🇪
 Une soundboard simple, rapide et prête à l’emploi pour les jeux de rôle ou de plateau.  
 🎲 Contrôlable à la souris ou avec le clavier (12 touches supérieures du clavier AZERTY).  
@@ -158,67 +167,71 @@ Une soundboard simple, rapide et prête à l’emploi pour les jeux de rôle ou 
 
 ---
 ## ⌨️ Touches actives (clavier AZERTY)
-```
-| Touche | Son déclenché |
-| Page 1 | :--------- |
-| `²`    | Switch page|
-| `&`    | Thunder    |
-| `é`    | Gun 1      |
-| `"`    | Gun 2      |
-| `'`    | Wind       |
-| `(`    | Rain       |
-| `-`    | Explosion  |
-| `è`    | Explosion  |
-| `_`    | coin       |
-| `ç`    | Heart Beat |
-| `à`    | Pressure   |
-| `=`    | Stop       |
+### Page 1
+| Touche|   Nom du son     |
+|-------|------------------|
+| `²`   | Switch page      |
+| `&`   | Thunder          |
+| `é`   | Gun 1            |
+| `"`   | Gun 2            |
+| `'`   | Wind             |
+| `(`   | Rain             |
+| `-`   | Explosion        |
+| `è`   | Explosion        |
+| `_`   | Coin             |
+| `ç`   | Heart Beat       |
+| `à`   | Pressure         |
+| `=`   | Stop             |
 
-| Touche | Nom du son |
-| Page 2 | :--------- |
-| `²`    | Switch page|
-| `&`    | Fracture   |
-| `é`    | Plouf      |
-| `"`    | Craft      |
-| `'`    | Lock       |
-| `(`    | Alien Door |
-| `-`    | Vault      |
-| `è`    | Old Door   |
-| `_`    | Door Slam  |
-| `ç`    | Crow       |
-| `à`    | KwaKwa     |
-| `=`    | Stop       |
 
-| Touche | Nom du son |
-| Page 3 | :--------- |
-| `²`    | Switch page|
-| `&`    | Steve      |
-| `é`    | Missing    |
-| `"`    | Drop       |
-| `'`    | Missing    |
-| `(`    | Missing    |
-| `-`    | Missing    |
-| `è`    | Missing    |
-| `_`    | Missing    |
-| `ç`    | Missing    |
-| `à`    | Missing    |
-| `=`    | Stop       |
+### Page 2
+| Touche|   Nom du son     |
+|-------|------------------|
+| `²`    | Switch page     |
+| `&`    | Fracture        |
+| `é`    | Plouf           |
+| `"`    | Craft           |
+| `'`    | Lock            |
+| `(`    | Alien Door      |
+| `-`    | Vault           |
+| `è`    | Old Door        |
+| `_`    | Door Slam       |
+| `ç`    | Crow            |
+| `à`    | KwaKwa          |
+| `=`    | Stop            |
 
-| Touche | Nom du son |
-| Page 4 | :--------- |
-| `²`    | Switch page|
-| `&`    | cave 1     |
-| `é`    | cave 2     |
-| `"`    | cave 3     |
-| `'`    | Walking    |
-| `(`    | Step2      |
-| `-`    | Groupe     |
-| `è`    | Alarm      |
-| `_`    | Alarm Bis  |
-| `ç`    | Creak      |
-| `à`    | wave       |
-| `=`    | Stop       |
-```
+### Page 3
+| Touche|   Nom du son     |
+|-------|------------------|
+| `²`    | Switch page     |
+| `&`    | Steve           |
+| `é`    | Missing         |
+| `"`    | Drop            |
+| `'`    | Missing         |
+| `(`    | Missing         |
+| `-`    | Missing         |
+| `è`    | Missing         |
+| `_`    | Missing         |
+| `ç`    | Missing         |
+| `à`    | Missing         |
+| `=`    | Stop            |
+
+### Page 4
+| Touche|   Nom du son     |
+|-------|------------------|
+| `²`    | Switch page     |
+| `&`    | cave 1          |
+| `é`    | cave 2          |
+| `"`    | cave 3          |
+| `'`    | Walking         |
+| `(`    | Step2           |
+| `-`    | Groupe          |
+| `è`    | Alarm           |
+| `_`    | Alarm Bis       |
+| `ç`    | Creak           |
+| `à`    | wave            |
+| `=`    | Stop            |
+
 ---
 
 ## 🚀 Lancer l’application
@@ -286,6 +299,7 @@ pyinstaller --noconfirm --onefile --windowed --add-data "img;img" --add-data "se
 ### 👤 Auteur
 
 DBZ-V
+
 
 
 
