@@ -50,7 +50,7 @@ sons_2 = {
 
 sons_3 = {
     "&" : ("Steve", "Steve.mp3"),                   # 1
-    "é" : ("Missing", "Missing.wav"),#------------------
+    "é" : ("Crystal", "bottle_break.wav"),#------------------
     '"' : ("Drop", "drop.wav"),                     # 3
     "'" : ("Missing", "Missing.wav"),#------------------
     "(" : ("Missing", "Missing.wav"),#------------------
@@ -138,8 +138,15 @@ def switch():
     charger_boutons()
 
 def boucle_hotkeys():
-    keyboard.add_hotkey("²", lambda: switch()) 
+    last_state_2 = False  # Suivi de l'état de la touche ²
     while hotkeys_active:
+        # Gestion du switch par la touche ²
+        pressed_2 = keyboard.is_pressed("²")
+        if pressed_2 and not last_state_2:  # Touche vient d'être pressée
+            switch()
+        last_state_2 = pressed_2
+
+        # Gestion des autres touches du set
         for scancode in sons:
             if keyboard.is_pressed(scancode):
                 nom, fichier = sons[scancode]
@@ -190,14 +197,23 @@ def charger_boutons():
         col = i % 12
         btn.grid(row=row, column=col, padx=10, pady=5, sticky="w")
 
-
+def set_sons(index):
+    """Change directement le set courant"""
+    global sons, current_set_index
+    current_set_index = index
+    sons = sound_sets[current_set_index]
+    print(f"🎛️ Passage manuel au set {current_set_index + 1}")
+    #jouer_son("buttonclick.mp3")
+    charger_boutons()
 
 
 
 # ====== Création de la fenêtre principale ========
 app = tk.Tk()
 app.title("🔊 Soundboard")
-app.geometry("1100x250")
+app.geometry("1100x270")
+#app.configure(bg="#171c2c")  # gris foncé 
+
 
 
 # ======== Charger la police personnalisée ========
@@ -239,13 +255,32 @@ for i, (key, (name, file)) in enumerate(sons.items()):
                     padx=5,
                     width=50,
                     bg="#ff7373",
-                    activebackground="#ff0000",
+                    activebackground="#a34040",
                     command=lambda f=file, n=name: [print(f"→→→ {n}"), jouer_son(f)])
     
     # Disposition sur 12 colonnes
     row = i // 12
     col = i % 12
     btn.grid(row=row, column=col, padx=10, pady=5, sticky="w")
+
+
+# ======== Boutons de sélection de Set ========
+
+conteneur_sets = tk.Frame(app)
+conteneur_sets.pack(pady=5)
+
+for i in range(4):
+    btn_set = tk.Button(
+        conteneur_sets,
+        text=f"🦊 Set {i+1}",
+        width=10,
+        font=police_perso,
+        bg="#cc73ff",
+        activebackground="#8400ff",
+        command=lambda i=i: set_sons(i)
+    )
+    btn_set.grid(row=0, column=i, padx=5, pady=5)
+
 
 # ======== Slider Volume ===========
 
@@ -278,10 +313,9 @@ volume_slider = tk.Scale(
 volume_slider.set(50)
 volume_slider.grid(row=1, column=1, padx=0, pady=0)  
 
-
 # ======== Bouton Quitter et détection ========
-ligne_horizontale = tk.Frame(app, height=1, bg="Dark red", bd=0)
-ligne_horizontale.pack(fill="x", padx=20, pady=10)
+# ligne_horizontale = tk.Frame(app, height=1, bg="Dark red", bd=0)
+# ligne_horizontale.pack(fill="x", padx=20, pady=10)
 
 conteneur_divers = tk.Frame(app)
 conteneur_divers.pack(pady=10)
@@ -312,7 +346,7 @@ threading.Thread(target=boucle_hotkeys, daemon=True).start()
 # ======== Affichage du numéro de build en bas à droite ========
 build_label = tk.Label(
     app,
-    text="Beta 2.3",
+    text="Beta 3.1",
     font=("Arial", 8),
     fg="gray",
     anchor="se"
