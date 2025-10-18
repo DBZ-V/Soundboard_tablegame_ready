@@ -81,10 +81,7 @@ A simple, fast, ready-to-use soundboard for role-playing or board games.
 
 ```
 pip install pygame keyboard
-```
-### Lancer l'application :
-```
-python app.py
+
 ```
 ### Launch the application:
 ```
@@ -289,5 +286,6 @@ pyinstaller --noconfirm --onefile --windowed --add-data "img;img" --add-data "se
 ### 👤 Auteur
 
 DBZ-V
+
 
 
