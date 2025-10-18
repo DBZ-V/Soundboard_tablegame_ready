@@ -81,6 +81,11 @@ A simple, fast, ready-to-use soundboard for role-playing or board games.
 | `à`    | wave            |
 | `=`    | Stop            |
 
+
+### 🟨 Switch Set
+| `²`    | Switch page     |
+
+- Displayed buttons to switch directly on the specific page is also available
 ---
 
 ## 🚀 Launch the Application
@@ -232,6 +237,10 @@ Une soundboard simple, rapide et prête à l’emploi pour les jeux de rôle ou 
 | `à`    | wave            |
 | `=`    | Stop            |
 
+### 🟨 Switch Set
+| `²`    | Switch page     |
+        
+- Des boutons affichés pour basculer directement sur la page spécifique sont également disponibles
 ---
 
 ## 🚀 Lancer l’application
@@ -299,6 +308,7 @@ pyinstaller --noconfirm --onefile --windowed --add-data "img;img" --add-data "se
 ### 👤 Auteur
 
 DBZ-V
+
 
 
 
