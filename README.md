@@ -1,4 +1,8 @@
 # 🔊 Table Game Ready Soundboard
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-green)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
+
 🇬🇧 🇨🇦 🇺🇸 [French version below]
 📑 Jump to: [English](#-table-game-ready-soundboard) | [Français](#-table-game-ready-soundboard-1)
 
@@ -86,6 +90,10 @@ A simple, fast, ready-to-use soundboard for role-playing or board games.
 | `²`    | Switch page     |
 
 - Displayed buttons to switch directly on the specific page is also available
+
+### 🌙 Dark mod
+- Turn the window darker for better visual confort
+![Application Preview](img/preview_dark.png)
 ---
 
 ## 🚀 Launch the Application
@@ -159,6 +167,10 @@ DBZ-V
 
 
 # 🔊 Table Game Ready Soundboard
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-green)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
+
 🇫🇷 🇨🇦 🇧🇪
 Une soundboard simple, rapide et prête à l’emploi pour les jeux de rôle ou de plateau.  
 🎲 Contrôlable à la souris ou avec le clavier (12 touches supérieures du clavier AZERTY).  
@@ -241,6 +253,11 @@ Une soundboard simple, rapide et prête à l’emploi pour les jeux de rôle ou 
 | `²`    | Switch page     |
         
 - Des boutons affichés pour basculer directement sur la page spécifique sont également disponibles
+
+### 🌙 Dark mod
+- Turn the window darker for better visual confort
+![Application Preview](img/preview_dark.png)
+
 ---
 
 ## 🚀 Lancer l’application
@@ -308,7 +325,6 @@ pyinstaller --noconfirm --onefile --windowed --add-data "img;img" --add-data "se
 ### 👤 Auteur
 
 DBZ-V
-
 
 
 

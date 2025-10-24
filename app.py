@@ -120,15 +120,15 @@ def toggle_hotkeys():
     if hotkeys_active:
         hotkeys_active = False
         print("⛔️ Détection clavier désactivée")
-        btn_toggle_hotkeys.config(text="⛔️ Ecoute du clavier", fg="red")
-        jouer_son("buttonclick.mp3")
+        btn_toggle_hotkeys.config(text="⛔️ Ecoute du clavier", fg="red",bg="#ff9999",activebackground="#ff0000")
+        # jouer_son("buttonclick.mp3")
     else:
         hotkeys_active = True
         print("✅ Détection clavier activée")
         hotkeys_thread = threading.Thread(target=boucle_hotkeys, daemon=True)
         hotkeys_thread.start()
-        btn_toggle_hotkeys.config(text="✅ Ecoute du clavier", fg="green")
-        jouer_son("buttonclick.mp3")
+        btn_toggle_hotkeys.config(text="✅ Ecoute du clavier", fg="green",bg="#99ffa7",activebackground="#00ff26")
+        # jouer_son("buttonclick.mp3")
 
 def switch():
     global sons, current_set_index
@@ -155,6 +155,46 @@ def boucle_hotkeys():
                 while keyboard.is_pressed(scancode):
                     time.sleep(0.05)
         time.sleep(0.05)
+
+# ===== Dark Mod =====
+
+light_index = 0
+def dark_mod():
+    """Change le mode clair / sombre"""
+    global light_index
+
+    # Inversion du mode
+    light_index = 1 - light_index  # 0 -> 1 ou 1 -> 0
+
+    if light_index == 1:
+        # 🌙 Mode sombre
+        app.configure(bg="#24202d")
+        conteneur_boutons.configure(bg="#24202d")
+        conteneur_divers.configure(bg="#24202d")
+        contener_slider.configure(bg="#24202d")
+        contener_sets.configure(bg="#24202d")
+        volume_label.configure(bg="#24202d", fg="white")
+        volume_slider.configure(bg="#FFC266", troughcolor="#FFAD33")
+        build_label.configure(bg="#24202d", fg="white")
+        label.configure(bg="#24202d", fg="white")
+        light_toggle_hotkeys.config(text="☀ Light mod", fg="orange",bg="#ffe6af", activebackground="#ffd572")
+        print("🎛️ Passage au mode sombre")
+    else:
+        # ☀️ Mode clair
+        app.configure(bg="SystemButtonFace")  
+        conteneur_boutons.configure(bg="SystemButtonFace")
+        conteneur_divers.configure(bg="SystemButtonFace")
+        contener_slider.configure(bg="SystemButtonFace")
+        contener_sets.configure(bg="SystemButtonFace")
+        volume_label.configure(bg="SystemButtonFace", fg="black")
+        volume_slider.configure(bg="#66CCFF", troughcolor="#3399FF")
+        build_label.configure(bg="SystemButtonFace", fg="grey")
+        label.configure(bg="SystemButtonFace", fg="black")
+        light_toggle_hotkeys.config(text="🌙 Dark mod", fg="blue",bg="#a099ff", activebackground="#0000ff")
+        print("🎛️ Passage au mode clair")
+
+    jouer_son("buttonclick.mp3")
+
 
 # ===== Slider de volume =====
 def changer_volume(val):
@@ -212,7 +252,7 @@ def set_sons(index):
 app = tk.Tk()
 app.title("🔊 Soundboard")
 app.geometry("1100x270")
-#app.configure(bg="#171c2c")  # gris foncé 
+#app.configure(bg="#171c2c")  # gris foncé  
 
 
 
@@ -266,12 +306,12 @@ for i, (key, (name, file)) in enumerate(sons.items()):
 
 # ======== Boutons de sélection de Set ========
 
-conteneur_sets = tk.Frame(app)
-conteneur_sets.pack(pady=5)
+contener_sets = tk.Frame(app)
+contener_sets.pack(pady=5)
 
 for i in range(4):
     btn_set = tk.Button(
-        conteneur_sets,
+        contener_sets,
         text=f"🦊 Set {i+1}",
         width=10,
         font=police_perso,
@@ -321,14 +361,28 @@ conteneur_divers = tk.Frame(app)
 conteneur_divers.pack(pady=10)
 
 # Bouton pour activer/désactiver l'écoute clavier
+light_toggle_hotkeys = tk.Button(
+    conteneur_divers,
+    text="🌙 Dark mod", fg="blue",
+    bg="#a099ff",
+    activebackground="#0000ff",
+    font=police_perso,
+    width=25,
+    command=dark_mod
+)
+light_toggle_hotkeys.grid(row=0, column=0, padx=5, pady=5)
+
+# Bouton pour activer/désactiver l'écoute clavier
 btn_toggle_hotkeys = tk.Button(
     conteneur_divers,
     text="✅ Ecoute du clavier", fg="green",
     font=police_perso,
     width=25,
+    bg="#99ffa7",
+    activebackground="#00ff26",
     command=toggle_hotkeys
 )
-btn_toggle_hotkeys.grid(row=0, column=0, padx=5, pady=5)
+btn_toggle_hotkeys.grid(row=0, column=1, padx=5, pady=5)
 
 # Bouton pour quitter
 bouton_quit = tk.Button(
@@ -336,9 +390,11 @@ bouton_quit = tk.Button(
     text="❌ Quitter",
     width=25,
     font=police_perso,
+    bg="#adadad",
+    activebackground="#232323",
     command=app.destroy
 )
-bouton_quit.grid(row=0, column=1, padx=5, pady=5)
+bouton_quit.grid(row=0, column=2, padx=5, pady=5)
 
 # ======== Lancement de l'écoute des touches dans un thread séparé ========
 threading.Thread(target=boucle_hotkeys, daemon=True).start()
@@ -346,7 +402,7 @@ threading.Thread(target=boucle_hotkeys, daemon=True).start()
 # ======== Affichage du numéro de build en bas à droite ========
 build_label = tk.Label(
     app,
-    text="Beta 3.1",
+    text="Beta 4.2",
     font=("Arial", 8),
     fg="gray",
     anchor="se"
